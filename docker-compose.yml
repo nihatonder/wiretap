@@ -1,0 +1,14 @@
+version: '3'
+services:
+  rabbitmq:
+    image: 'rabbitmq:3-management'
+    ports:
+      - '5672:5672'
+      - '15672:15672'
+
+  activemq:
+    image: 'rmohr/activemq'
+    platform: linux/amd64
+    ports:
+      - '61616:61616'
+      - '8161:8161'
